@@ -1,0 +1,632 @@
+@charset "utf-8";
+
+body{
+    width:100%;
+    margin:100px auto;
+}
+
+.header{
+    background-color: rgb(100, 158, 158);
+    height: 100px;
+    width:100%;
+    position: fixed;
+    top:0;  /*☆*/
+    left:0;  /*☆*/
+    z-index: 999;  /*☆*/
+}
+
+.header h1{
+    margin:0;
+    text-align: center;
+    color:#fff;
+}
+
+.main{
+    width: 80%;
+    margin:auto;
+}
+
+.section{
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+}
+
+/* ◆◆◆◆① :hover◆◆◆◆------*/
+/* ----- 1-1color変更-----*/
+.button1-1{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+}
+
+.button1-1:hover{   /*疑似クラス:選択されたときに特定の状態を指定する*/
+    background-color: rgb(51, 124, 124);    /*色を変化*/
+    color:#fff;
+}
+
+/* ----- 1-2大きさ変更-----*/
+.button1-2{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+}
+
+.button1-2:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+    width:250px;     /*横幅を変化*/
+    height:70px;    /*縦幅を変化
+    /* transform: scale(1.2);  */
+}
+
+/* ----- 1-3横に移動-----*/
+.button1-3{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+}
+
+.button1-3:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+    transform: translateX(50px);    /*横に移動*/
+}
+
+/* ----- 1-4縦に移動-----*/
+.button1-4{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+}
+
+.button1-4:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+    /*transform: translateY(50px);    縦に移動 */
+    transform: translate(100px,50px);
+}
+
+
+/* ◆◆◆◆②transition + :hover◆◆◆◆------*/
+/* ----- 2-1color変更-----*/
+.button2-1{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    transition:all 2s ease-in 0.5s; /*transition と :hover*/
+}
+
+.button2-1:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+}
+
+/* ----- 2-2大きさ変更-----*/
+.button2-2{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    transition:all 1s ease-in 0.3s; /*transition と :hover*/
+}
+
+.button2-2:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+    transform: scale(1.2);
+}
+
+/* ----- 2-3横に移動-----*/
+.button2-3{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    /*transition と :hover*/
+    transition:all 1s ease-in 0.3s;
+}
+
+.button2-3:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+    transform: translateX(50px);
+}
+
+/* ----- 2-4縦に移動-----*/
+.button2-4{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    /*transition と :hover*/
+    transition:all 1s ease-in 0.3s;
+}
+
+.button2-4:hover{
+    background-color: rgb(51, 124, 124);
+    color:#fff;
+    transform: translateY(50px);
+}
+
+
+/* ◆◆◆◆③animation @keyfram + :hover◆◆◆◆------*/
+/* ----- 3-1color変更-----*/
+.button3-1{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn-out3-1 2s ease-out forwards;
+}
+
+.button3-1:hover{
+    /* animation-name: btn;
+    animation-duration:2s;
+    animation-delay:0.3s;
+    animation-timing-function:ease-out;
+    animation-fill-mode:forwards; */
+    animation: btn3-1 2s 0.3s ease-out forwards;
+}
+
+@keyframes btn3-1{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+    }
+    25%{
+        background-color: rgb(93, 187, 81);
+        color:rgb(213, 214, 214);
+    }
+    50%{
+        background-color: rgb(139, 63, 146);
+        color:rgb(213, 214, 214);
+    }
+    75%{
+        background-color: rgb(57, 126, 55);
+        color:rgb(213, 214, 214);
+    }
+    100%{
+        background-color: rgb(92, 22, 22);
+        color:#fff;
+    }
+}
+
+@keyframes btn-out3-1{
+    0%{
+        background-color: rgb(77, 175, 175);
+        color:rgb(201, 201, 201);
+    }
+    25%{
+        background-color: rgb(97, 221, 221);
+        color:rgb(125, 126, 126);
+    }
+    100%{
+        background-color: rgb(173, 253, 253);
+        color:rgb(0, 0, 0);
+    }
+}
+
+/* ----- 3-2大きさ変更-----*/
+.button3-2{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn-out3-2 2s ease-out forwards;
+}
+
+.button3-2:hover{
+    animation: btn3-2 2s 0.3s ease-out forwards;
+}
+
+@keyframes btn3-2{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+        width:210px;
+        height: 60px;
+    }
+    25%{
+        background-color: rgb(81, 187, 187);
+        color:rgb(213, 214, 214);
+        width:220px;
+        height: 65px;
+    }
+    50%{
+        background-color: rgb(63, 146, 146);
+        color:rgb(213, 214, 214);
+        width:210px;
+        height: 60px;
+    }
+    75%{
+        background-color: rgb(55, 126, 126);
+        color:rgb(213, 214, 214);
+        width:200px;
+        height: 55px;
+    }
+    100%{
+        background-color: rgb(4, 8, 8);
+        color:#fff;
+        width:210px;
+        height: 60px;
+    }
+}
+
+@keyframes btn-out3-2{
+    0%{
+        background-color: rgb(77, 175, 175);
+        color:rgb(201, 201, 201);
+        width:200px;
+        height: 55px;
+    }
+    25%{
+        background-color: rgb(97, 221, 221);
+        color:rgb(125, 126, 126);
+        width:210px;
+        height: 60px;
+    }
+    100%{
+        background-color: rgb(173, 253, 253);
+        color:rgb(0, 0, 0);
+        width:200px;
+        height: 55px;
+    }
+}
+
+/* ----- 3-3横に移動-----*/
+.button3-3{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn-out3-3 2s ease-out forwards;
+}
+
+.button3-3:hover{
+    animation: btn3-3 2s 0.3s ease-out forwards;
+}
+
+@keyframes btn3-3{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+        transform: translateX(10px);
+    }
+    25%{
+        background-color: rgb(93, 187, 81);
+        color:rgb(213, 214, 214);
+        transform: translateX(20px);
+    }
+    50%{
+        background-color: rgb(139, 63, 146);
+        color:rgb(213, 214, 214);
+        transform: translateX(50px);
+    }
+    75%{
+        background-color: rgb(57, 126, 55);
+        color:rgb(213, 214, 214);
+        transform: translateX(100px);
+    }
+    100%{
+        background-color: rgb(92, 22, 22);
+        color:#fff;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes btn-out3-3{
+    0%{
+        background-color: rgb(77, 175, 175);
+        color:rgb(201, 201, 201);
+    }
+    25%{
+        background-color: rgb(97, 221, 221);
+        color:rgb(125, 126, 126);
+    }
+    100%{
+        background-color: rgb(173, 253, 253);
+        color:rgb(0, 0, 0);
+    }
+}
+
+/* ----- 3-4縦に移動-----*/
+.button3-4{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn-out3-4 2s ease-out forwards;
+}
+
+.button3-4:hover{
+    animation: btn3-4 2s 0.3s ease-out forwards;
+}
+
+@keyframes btn3-4{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+        transform: translateY(100px);
+    }
+    100%{
+        background-color: rgb(92, 22, 22);
+        color:#fff;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes btn-out3-4{
+    0%{
+        background-color: rgb(77, 175, 175);
+        color:rgb(201, 201, 201);
+    }
+    25%{
+        background-color: rgb(97, 221, 221);
+        color:rgb(125, 126, 126);
+    }
+    100%{
+        background-color: rgb(173, 253, 253);
+        color:rgb(0, 0, 0);
+    }
+}
+
+
+/* ◆◆◆◆④animation @keyfram + :hoverなし◆◆◆◆------*/
+.button4-1{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn4-1 2s ease-out forwards;
+}
+
+@keyframes btn4-1{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+    }
+    25%{
+        background-color: rgb(93, 187, 81);
+        color:rgb(213, 214, 214);
+    }
+    50%{
+        background-color: rgb(139, 63, 146);
+        color:rgb(213, 214, 214);
+    }
+    75%{
+        background-color: rgb(57, 126, 55);
+        color:rgb(213, 214, 214);
+    }
+    100%{
+        background-color: rgb(92, 22, 22);
+        color:#fff;
+    }
+}
+
+.button4-2{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn4-2 2s ease-out forwards;
+}
+
+@keyframes btn4-2{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+        width:210px;
+        height: 60px;
+    }
+    25%{
+        background-color: rgb(81, 187, 187);
+        color:rgb(213, 214, 214);
+        width:220px;
+        height: 65px;
+    }
+    50%{
+        background-color: rgb(63, 146, 146);
+        color:rgb(213, 214, 214);
+        width:210px;
+        height: 60px;
+    }
+    75%{
+        background-color: rgb(55, 126, 126);
+        color:rgb(213, 214, 214);
+        width:200px;
+        height: 55px;
+    }
+    100%{
+        background-color: rgb(4, 8, 8);
+        color:#fff;
+        width:210px;
+        height: 60px;
+    }
+}
+
+.button4-3{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn4-3 2s ease-out forwards;
+}
+
+@keyframes btn4-3{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+        transform: translateX(10px);
+    }
+    25%{
+        background-color: rgb(93, 187, 81);
+        color:rgb(213, 214, 214);
+        transform: translateX(20px);
+    }
+    50%{
+        background-color: rgb(139, 63, 146);
+        color:rgb(213, 214, 214);
+        transform: translateX(50px);
+    }
+    75%{
+        background-color: rgb(57, 126, 55);
+        color:rgb(213, 214, 214);
+        transform: translateX(100px);
+    }
+    100%{
+        background-color: rgb(92, 22, 22);
+        color:#fff;
+        transform: translateX(0px);
+    }
+}
+
+.button4-4{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+
+    animation: btn4-4 2s ease-out forwards;
+}
+
+@keyframes btn4-4{
+    0%{
+        background-color: rgb(90, 209, 209);
+        color:rgb(156, 156, 156);
+        transform: translateY(100px);
+    }
+    100%{
+        background-color: rgb(92, 22, 22);
+        color:#fff;
+        transform: translateY(0px);
+    }
+}
+
+/* animation2 */
+
+.mask{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgb(236, 236, 236);
+    /* z-index:999; */
+    animation:mask 4s ease-in-out forwards;
+}
+
+@keyframes mask{
+    0%{
+        opacity:1;
+        transform:translateX(-120%);
+    }
+    30%{
+        opacity:1;
+        transform:translateX(0);
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        z-index:-1;
+    }
+}
+
+.mask h1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity:0;
+    animation:maskh1 4s ease-in-out 1s forwards;
+}
+
+@keyframes maskh1{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        z-index:-1;
+    }
+}
+.demo{
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+}
+.demo a{
+    text-decoration: none;
+    color:black;
+}
+
+.demo2 a{
+    display:block;
+    width:200px;
+    height: 55px;
+    background-color: rgb(173, 253, 253);
+    border-radius: 50px;
+    text-align: center;
+    padding-top:30px;
+    text-decoration: none;
+    color:black;
+}
+
