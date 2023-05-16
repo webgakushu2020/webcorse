@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <meta name="description" content="クラスを使った書き方">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header">
+            <h1>psition ページ内リンク 固定</h1>
+            <ul>
+                <li><a href="#flower1">①に飛ぶ</a></li>
+                <li><a href="#flower2">②に飛ぶ</a></li>
+                <li><a href="#flower3">③に飛ぶ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <h3>① position: relative</h3>
+        <div id="flower1">
+            <img src="images/sakura01.png">
+            <div id="char01">Spring</div>
+        </div>
+        <h3>② position: absolute</h3>
+        <div id="flower2">
+            <img src="images/summer01.png">
+            <div id="char02">Summer</div>
+        </div>
+        
+        <h3>③ position: absolute と relarive</h3>
+        <div id="flower3">
+            <img src="images/autumn03.png">
+            <div id="char03">Autumn</div>
+        </div>
+
+    </div>
+</body>
+</html>

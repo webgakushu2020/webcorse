@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* 画像の上に文字を乗せるスタイル */
+.main{
+    width:80%;
+    margin:150px auto;
+}
+#char01{
+    font-size: 50px;
+    animation: char1 3s ease-in 0.5s forwards;
+    position: relative;
+    Top:-120px;
+    Left:250px;
+}
+@keyframes char1 {
+    0%{
+        opacity: 0.2;
+        Top:0px;
+        Left:0px;
+    }
+    50%{
+        opacity: 1;
+        Top:-120px;
+        Left:30px;
+    }
+    100%{
+        opacity: 0.5;
+        Top:-120px;
+        Left:250px;
+    }
+}
+
+#char02{
+    font-size: 50px;
+    position:absolute;
+    Top:1000px;
+    left:100px;
+}
+#flower3{
+    position:relative;
+}
+#char03{
+    font-size: 50px;
+    position: absolute;
+    bottom:160px;
+    right:500px;
+}
+
+/* ヘッダーのスタイル */
+.header{
+    background-color: rgb(179, 255, 255);
+    width: 100%;
+    height: 80px;
+    display:flex;
+    justify-content: space-around;
+    position: fixed;
+    top:50px;
+    left:100px;
+    z-index: 999;
+}
+.header ul {
+    padding-top: 20px;
+    display:flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.header ul li {
+    width:150px;
+    margin-right:20px;
+}
+.header ul li a{
+    text-decoration: none;
+}
